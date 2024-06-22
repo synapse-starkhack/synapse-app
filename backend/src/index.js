@@ -8,7 +8,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-const { send } = require('./starknet');
+const { transfer } = require('./starknet');
 
 app.get('/', function (req, res) {
     res.send('Hello World');
