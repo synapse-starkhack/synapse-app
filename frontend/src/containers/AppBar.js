@@ -16,10 +16,10 @@ import AdbIcon from '@mui/icons-material/Adb';
 import Dynamic from '../components/Dynamic';
 
 const productName = 'Synapse';
-const pages = ['Simple Earn', 'Earn Points', 'Dashboard', 'About'];
+const pages = ['Simple Earn', 'Tx Master', 'Dashboard', 'About'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
-function ResponsiveAppBar() {
+function ResponsiveAppBar({ onChange }) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -120,7 +120,7 @@ function ResponsiveAppBar() {
             {pages.map((page) => (
               <Button
                 key={page}
-                onClick={handleCloseNavMenu}
+                onClick={() => onChange(page)}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
                 {page}
