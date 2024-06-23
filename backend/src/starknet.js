@@ -1,4 +1,4 @@
-const { Account, Contract, RpcProvider, cairo } = require('starknet');
+const { Account, Contract, RpcProvider } = require('starknet');
 const dotenv = require('dotenv');
 
 dotenv.config();
