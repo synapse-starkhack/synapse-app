@@ -4,10 +4,11 @@ import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
 import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
 
-import Ad from './Ad';
-import ExecuteTransaction from '../components/ExecuteTransaction';
-import SignTransaction from '../components/SignTransaction';
+// import Ad from './Ad';
+// import ExecuteTransaction from '../components/ExecuteTransaction';
+// import SignTransaction from '../components/SignTransaction';
 
 const steps = [
   'Sign Transaction',
@@ -15,18 +16,8 @@ const steps = [
   'Finish the transation',
 ];
 
-const SimpleEarn = () => {
+const TxMaster = () => {
     const [step, setStep] = useState(0);
-    const [network, setNework] = useState('');
-    const [token, setToken] = useState('');
-    const [transaction, setTranscation] = useState();
-
-    const onSubmitTransaction = ({ network, token, transaction }) => {
-        setNework(network);
-        setToken(token);
-        setTranscation(transaction);
-        setStep(1);
-    };
     
     return (
         <Container>
@@ -40,12 +31,13 @@ const SimpleEarn = () => {
                 </Stepper>
             </Box>
             <Box sx={{ width: '100%' }}>
-                {step === 0 && <SignTransaction onChange={data => onSubmitTransaction(data)} /> }
+                <Typography variant='h5' margin={4}>Coming Soon......</Typography>
+                {/* {step === 0 && <SignTransaction onChange={data => onSubmitTransaction(data)} /> }
                 {step === 1 && <Ad onSubmit={() => setStep(2)} />}
-                {step === 2 && <ExecuteTransaction />}
+                {step === 2 && <ExecuteTransaction />} */}
             </Box>
         </Container>
     );
 };
 
-export default SimpleEarn;
+export default TxMaster;

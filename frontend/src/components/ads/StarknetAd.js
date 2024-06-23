@@ -5,6 +5,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
 
 const StarknetAd = ({ onSubmit }) => {
     const [value, setValue] = useState();
@@ -15,7 +16,7 @@ const StarknetAd = ({ onSubmit }) => {
     };
 
     return (
-        <>
+        <Box>
             <iframe
                 width="560"
                 height="315"
@@ -26,11 +27,10 @@ const StarknetAd = ({ onSubmit }) => {
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
             />
-            <div>
+            <Box>
                 <FormControl>
                     <FormLabel id="demo-controlled-radio-buttons-group">What is Account Abstraction?</FormLabel>
                     <RadioGroup
-                        aria-labelledby="demo-controlled-radio-buttons-group"
                         name="controlled-radio-buttons-group"
                         value={value}
                         onChange={handleChange}
@@ -42,8 +42,8 @@ const StarknetAd = ({ onSubmit }) => {
                     </RadioGroup>
                     <Button variant="contained" onClick={handleOnSubmit}>Submit</Button>
                 </FormControl>
-            </div>
-        </>
+            </Box>
+        </Box>
     );
 };
 

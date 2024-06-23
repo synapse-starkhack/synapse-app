@@ -1,13 +1,11 @@
 import { useUser } from '../contexts/UserContext';
+import { Typography } from '@mui/material';
 
 const Dashboard = () => {
     const user = useUser();
     return (
         <>
-            <p>{user.id}</p>
-            <p>{user.name}</p>
-            <p>{user.addresses.evm}</p>
-            <p>{user.addresses.starknet}</p>
+            <Typography variant='h5' margin={4}>Coming Soon......</Typography>
         </>
     )
 }

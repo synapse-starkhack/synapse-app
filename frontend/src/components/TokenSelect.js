@@ -1,3 +1,4 @@
+import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
@@ -34,10 +35,11 @@ const OpIcon = () => (
 
 const TokenSelect = ({ onChange }) => {
   return (
-    <>
-        <Typography>Starknet</Typography>
+    <Box>
+        <Typography variant='h5' margin={2}>Please select the token you want to earn</Typography>
+        <Typography variant='h6' margin={2}>Starknet</Typography>
         <Stack direction="row" spacing={2}>
-            <Button variant="contained" size="large" startIcon={<EthIcon />} onClick={() => onChange({ network: 'starknet', ticket: 'eth' })}>
+            <Button variant="contained" size="large" startIcon={<EthIcon />} onClick={() => onChange({ network: 'starknet', ticket: 'eth' })} disabled>
                 ETH
             </Button>
             <Button variant="contained" size="large" startIcon={<StrkIcon />} onClick={() => onChange({ network: 'starknet', ticket: 'strk' })}>
@@ -45,7 +47,7 @@ const TokenSelect = ({ onChange }) => {
             </Button>
         </Stack>
 
-        <p>Optimism</p>
+        <Typography variant='h6' margin={2}>Optimism</Typography>
         <Stack direction="row" spacing={2}>
             <Button variant="contained" size="large" startIcon={<EthIcon />} onClick={() => onChange({ network: 'optimism', ticket: 'eth' })} disabled>
                 ETH
@@ -55,7 +57,7 @@ const TokenSelect = ({ onChange }) => {
             </Button>
         </Stack>
 
-        <p>Arbitrum</p>
+        <Typography variant='h6' margin={2}>Arbitrum</Typography>
         <Stack direction="row" spacing={2}>
             <Button variant="contained" size="large" startIcon={<EthIcon />} onClick={() => onChange({ network: 'arbitrum', ticket: 'eth' })} disabled>
                 ETH
@@ -65,13 +67,13 @@ const TokenSelect = ({ onChange }) => {
             </Button>
         </Stack>
 
-        <p>Linea</p>
+        <Typography variant='h6' margin={2}>Linea</Typography>
         <Stack direction="row" spacing={2}>
-            <Button variant="contained" size="large" startIcon={<EthIcon />} onClick={() => onChange({ network: 'starknet', ticket: 'eth' })}>
+            <Button variant="contained" size="large" startIcon={<EthIcon />} onClick={() => onChange({ network: 'starknet', ticket: 'eth' })} disabled>
                 ETH
             </Button>
         </Stack>
-    </>
+    </Box>
   );
 };
 
